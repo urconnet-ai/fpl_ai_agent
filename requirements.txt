@@ -4,5 +4,4 @@ numpy
 plotly
 requests
 scikit-learn
-sqlite3-binary
-google-generativeai
+
