@@ -4,9 +4,7 @@ plotly
 requests
 scikit-learn
 numpy
-openai
+openai==1.42.0
 os
-time
 difflib
-
-
+time
