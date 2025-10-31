@@ -1,12 +1,12 @@
 streamlit>=1.36.0
 pandas
 plotly
-scikit-learn
 requests
+scikit-learn
 numpy
-sqlite3-binary
 openai
 os
 time
 difflib
+
 
