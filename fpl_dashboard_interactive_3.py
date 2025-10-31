@@ -11,6 +11,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import time 
 import difflib
+import os
 
 # phase 2 engine (your local file)
 from fpl_ai_agents_phase2_ml import (
@@ -23,7 +24,26 @@ from fpl_ai_agents_phase2_ml import (
     save_to_sqlite,
 )
 
-DB_PATH = "fpl_ai.db"
+#DB_PATH = "fpl_ai.db"
+DB_PATH = DB_PATH = os.path.join(os.getcwd(), "fpl_ai.db")
+conn = sqlite3.connect(DB_PATH)
+cur = conn.cursor()
+cur.execute("""
+CREATE TABLE IF NOT EXISTS weekly_reports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    gw INTEGER,
+    commentary TEXT,
+    created_at TEXT,
+    risers TEXT,
+    fallers TEXT,
+    watchlist TEXT,
+    captaincy_picks TEXT,
+    value_picks TEXT,
+    bandwagons TEXT
+)
+""")
+conn.commit()
+conn.close()
 
 # =========================================================
 # PAGE CONFIG & THEME
