@@ -229,7 +229,7 @@ if st.button("Get Latest Stats"):
 
 analysis = load_latest_report()
 if not analysis:
-    st.warning("No saved analysis found in fpl_ai.db — please run pipeline once.")
+    st.warning("Fetch Stats to proceed.")
     st.stop()
 
 # pull fresh FPL again for raw view
