@@ -4,10 +4,9 @@ plotly
 scikit-learn
 requests
 numpy
-markdown-it-py
-rich
 sqlite3-binary
 openai
 os
 time
 difflib
+
